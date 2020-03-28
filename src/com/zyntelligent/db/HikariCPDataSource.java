@@ -14,14 +14,11 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import com.zyntelligent.db.config.DatabaseConfig;
 
-
 @Component
 public class HikariCPDataSource {
 	 
     private static final Logger LOG = LoggerFactory.getLogger(HikariCPDataSource.class);
-    
     public static HikariDataSource ds = null;
-
     public static Connection getConnection() throws SQLException {
         return ds.getConnection();
     }
@@ -32,7 +29,6 @@ public class HikariCPDataSource {
 	    ds = new HikariDataSource(config);
 	    LOG.info("HikariDataSource Started");
     }
-    
     
     @PreDestroy
     public void shutDown() {
