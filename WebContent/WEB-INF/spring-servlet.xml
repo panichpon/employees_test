@@ -10,9 +10,8 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 
-	<!-- DispatcherServlet Context: defines this servlet's request-processing 
-		infrastructure -->
-
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
 	<!-- Call InitHikari on Startup -->
 	<beans:bean id="InitHikari" class="com.zyntelligent.db.HikariCPDataSource" />
 
@@ -29,8 +28,6 @@
 		<task:scheduled ref="notifyTask" method="moveCalvesCow" cron="0 59 23 * * ?" />
 	</task:scheduled-tasks>
 	<task:scheduler id="DairyScheduler" pool-size="10" /> -->
-	
-
 
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
@@ -43,11 +40,12 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
+	<!-- setting maximum upload size -->
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<!-- setting maximum upload size -->
 		<beans:property name="maxUploadSize" value="10000000" />
 	</beans:bean>
 
+	<!-- mapping resources -->
 	<resources mapping="/contents/**" location="/contents/" />
 	
 	<!-- Windows -->
