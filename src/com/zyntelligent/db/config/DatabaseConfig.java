@@ -7,8 +7,8 @@ public class DatabaseConfig {
 	private final String DB_SERVER = "localhost";
 	private final String DB_PORT = "3306";
 	private final String DB_NAME = "zyanwoadev";
-	private final String DB_USERNAME = "zyanapp";
-	private final String DB_PASSWORD = "zy@n@pplic@tion";
+	private final String DB_USERNAME = "root";
+	private final String DB_PASSWORD = "1234";
 
 	public HikariConfig getHikariConfig() {
 		HikariConfig config = new HikariConfig();
