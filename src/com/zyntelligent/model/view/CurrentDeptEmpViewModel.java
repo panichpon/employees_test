@@ -1,14 +1,14 @@
-package com.zyntelligent.model;
+package com.zyntelligent.model.view;
 
 import java.util.Date;
 
-public class DepartmentsManagerModel {
+public class CurrentDeptEmpViewModel {
 	private int empNo;
-	private int deptNo;
+	private char deptNo;
 	private Date fromDate;
 	private Date toDate;
 
-	public DepartmentsManagerModel(int empNo, int deptNo, Date fromDate, Date toDate) {
+	public CurrentDeptEmpViewModel(int empNo, char deptNo, Date fromDate, Date toDate) {
 		super();
 		this.empNo = empNo;
 		this.deptNo = deptNo;
@@ -24,11 +24,11 @@ public class DepartmentsManagerModel {
 		this.empNo = empNo;
 	}
 
-	public int getDeptNo() {
+	public char getDeptNo() {
 		return deptNo;
 	}
 
-	public void setDeptNo(int deptNo) {
+	public void setDeptNo(char deptNo) {
 		this.deptNo = deptNo;
 	}
 
@@ -50,7 +50,7 @@ public class DepartmentsManagerModel {
 
 	@Override
 	public String toString() {
-		return "DepartmentsManagerModel [empNo=" + empNo + ", deptNo=" + deptNo + ", fromDate=" + fromDate + ", toDate="
+		return "CurrentDeptEmpViewModel [empNo=" + empNo + ", deptNo=" + deptNo + ", fromDate=" + fromDate + ", toDate="
 				+ toDate + ", getEmpNo()=" + getEmpNo() + ", getDeptNo()=" + getDeptNo() + ", getFromDate()="
 				+ getFromDate() + ", getToDate()=" + getToDate() + ", getClass()=" + getClass() + ", hashCode()="
 				+ hashCode() + ", toString()=" + super.toString() + "]";
