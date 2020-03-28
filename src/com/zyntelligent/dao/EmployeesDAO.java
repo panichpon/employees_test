@@ -1,6 +1,6 @@
-package employees_test;
+package com.zyntelligent.dao;
 
-public class Employee {
+public class EmployeesDAO {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
