@@ -19,7 +19,7 @@ public class DatabaseConfig {
 		config.setConnectionTimeout(30000); // 30 sec
 		config.setMaxLifetime(1800000); // 30 mins
 		config.setIdleTimeout(300000); // 5 mins
-		config.setPoolName("ZDairy-HikariPool-1");
+		config.setPoolName("EMPTest-HikariPool-1");
 		config.setDataSourceClassName("org.mariadb.jdbc.MariaDbDataSource");
 		config.addDataSourceProperty("serverName", DB_SERVER);
 		config.addDataSourceProperty("portNumber", DB_PORT);

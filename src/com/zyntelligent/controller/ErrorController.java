@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ErrorController {
-	@RequestMapping(value = "errors", method = RequestMethod.GET)
+	@RequestMapping(value = "/errors", method = RequestMethod.GET)
     public ModelAndView renderErrorPage(HttpServletRequest request) {
          
         ModelAndView errorPage = new ModelAndView("errorPage");
